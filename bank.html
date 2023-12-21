@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bank account</title>
+</head>
+
+<body>
+    <h1>
+        Bank account with construct function
+
+    </h1>
+
+</body>
+<script>
+    function bank_account(account_no, name, balance, type) {
+        this.name = name
+        this.account_no = account_no
+        this.balance = balance
+        this.type = type
+
+
+    }
+
+    function dep_method(amount) {
+        this.balance += amount
+
+    }
+
+    function withdraw(amount) {
+        if (this.balance - amount >= 1000) {
+            this.balance -= amount
+        }
+        else{
+            console.log(`insuficient balance of ${this.name}`)
+        }
+    }
+
+    function bal(amount){
+        let amount1=this.balance
+        console.log(amount1)
+        }
+
+
+function active(amount){
+    if (this.balance>=1000){
+        console.log(`${this.name}'s' account is active`)
+    }
+    else{
+        console.log(`${this.name}'s'acount is not active`)
+    }
+}
+
+let person1=new bank_account(123456789011,"Supriya",5000,"savings")
+console.log(person1)
+
+
+dep_method.call(person1,2000)
+withdraw.call(person1,1000)
+active.call(person1)
+bal.call(person1)
+</script>
+
+
+</html>

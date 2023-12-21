@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function book(title,author,genere,price){
+this.title=title
+this.author=author
+this.genere=genere
+this.price=price
+
+    }
+function author(name,birth_year,nationality){
+    this.name=name
+    this.birth_year=birth_year
+    this.nationality=nationality                                                                                                                                                             
+}
+
+let author1=new author("Ashish ",1997,"India")
+let book1=new book("how to win people",author1, "life_style", 599)
+console.log(book1)
+console.log(author1)
+
+
+
+function GetBookInfo (title,author,genere,price){
+
+console.log(`title : ${title}\nauthor : ${author1.name}\ngenere : ${genere}\nprice : ${price}`)
+
+
+ 
+}
+
+
+
+GetBookInfo(book1.title,book1.author,book1.genere,book1.price)
+
+</script>
+</body>
+</html>
